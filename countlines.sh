@@ -1,8 +1,8 @@
-file="$1"
 
+for file in "$@"; do
 if [[ -f "$file" ]]; then
 
-echo "$1";
+echo "$file";
 
 numlineas=$(wc -l < "$file")
 
@@ -15,3 +15,4 @@ echo "$numlineas" "It has more than one line"
 
 fi
 fi
+done
